@@ -3,7 +3,7 @@ import Image from "next/image";
 import Product from "@/assets/Product.png";
 import Product2 from "@/assets/Product2.png";
 import Product3 from "@/assets/Product3.png";
-import Wifi from "@/assets/Wifi.png";
+import Wifi from "@/assets/WiFi.png";
 import Modem from "@/assets/Modem.png";
 import icon1 from "@/assets/Vector.svg";
 import icon2 from "@/assets/Vector (1).svg";
