@@ -79,7 +79,7 @@ export function Hero({ onOpenModal }: HeroProps) {
         muted
         playsInline
       >
-        <source src='/assets/bgVid.mp4' type='video/mp4' />
+        <source src='/assets/bgVid2.mp4' type='video/mp4' />
         Your browser does not support the video tag.
       </video>
 
