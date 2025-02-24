@@ -58,18 +58,15 @@ export const ProductShowcase = () => {
     <section
       ref={sectionRef}
       id='about'
-      className='bg-gradient-to-b from-[#fff] to-[#D2DCFF] py-24 overflow-x-clip'
+      className='bg-gradient-to-b from-[#fff] to-[#d2ffec] py-24 overflow-x-clip'
     >
       <div className='container'>
         <div className='section-heading'>
           <div className='flex justify-center'>
             <div className='tag'>Boost your productivity with Alfred</div>
           </div>
-          <h2 className='text-center text-xl md:text-[40px] md:leading-[45px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#00CFAA] text-transparent bg-clip-text mt-5'>
-            ALFRED
-          </h2>
-          {/* <h2 className='section-title mt-5'>ALFRED</h2> */}
-          <h2 className='text-center text-xl md:text-[40px] md:leading-[45px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#00CFAA] text-transparent bg-clip-text mt-5'>
+          <h2 className='section-title mt-5'>ALFRED</h2>
+          <h2 className='section-title mt-5'>
             A more effective way of making decisions
           </h2>
           <p className='section-description mt-5'>
@@ -121,7 +118,7 @@ export const ProductShowcase = () => {
             alt='pyramid image'
             height={262}
             width={262}
-            className='hidden md:block absolute -right-36 -top-32'
+            className='hidden lg:block absolute -right-36 -top-32'
             style={{
               translateY,
             }}
@@ -131,7 +128,7 @@ export const ProductShowcase = () => {
             alt='tube image'
             height={248}
             width={248}
-            className='hidden md:block absolute bottom-24 -left-36'
+            className='hidden lg:block absolute bottom-24 -left-36'
             style={{
               translateY,
             }}

@@ -22,7 +22,7 @@ export function CallToAction({ onOpenModal }: CallToActionProps) {
     <section
       ref={sectionRef}
       id='updates'
-      className='bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip'
+      className='bg-gradient-to-b from-white to-[#94e5d6] py-24 overflow-x-clip'
     >
       <div className='container'>
         <div className='section-heading relative pt-10'>
@@ -52,15 +52,6 @@ export function CallToAction({ onOpenModal }: CallToActionProps) {
           <button onClick={onOpenModal} className='btn btn-primary'>
             Contact Us
           </button>
-          {/* <a
-            href='https://alfred-pathsetter-cebxf4cpafazhthy.southindia-01.azurewebsites.net'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='btn btn-text gap-1 group transition-all duration-300 ease-in-out inline-flex items-center'
-          >
-            <span>Learn more</span>
-            <ArrowRight className='h-5 w-5 transform transition-transform duration-300 ease-in-out group-hover:translate-x-1' />
-          </a> */}
         </div>
       </div>
     </section>

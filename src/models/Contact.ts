@@ -4,6 +4,7 @@ const ContactSchema = new Schema(
   {
     name: { type: String, required: true },
     email: { type: String, required: true },
+    role: { type: String, required: true },
     organization: { type: String, required: true },
     industry: { type: String, required: true },
     message: { type: String, required: true },

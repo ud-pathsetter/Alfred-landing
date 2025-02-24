@@ -12,6 +12,7 @@ interface ContactModalProps {
 export const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [role, setRole] = useState("");
   const [organization, setOrganization] = useState("");
   const [industry, setIndustry] = useState("");
   const [message, setMessage] = useState("");
@@ -23,7 +24,14 @@ export const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, organization, industry, message }),
+        body: JSON.stringify({
+          name,
+          email,
+          role,
+          organization,
+          industry,
+          message,
+        }),
       });
 
       if (res.ok) {
@@ -34,6 +42,7 @@ export const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
         // Clear fields & close modal
         setName("");
         setEmail("");
+        setRole("");
         setOrganization("");
         setIndustry("");
         setMessage("");
@@ -124,6 +133,25 @@ export const ContactModal: FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   placeholder='you@example.com'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              {/* Role */}
+              <div className='mb-4'>
+                <label
+                  className='block text-gray-700 font-semibold mb-2'
+                  htmlFor='role'
+                >
+                  Role
+                </label>
+                <input
+                  id='role'
+                  type='text'
+                  className='border border-gray-300 rounded-md w-full py-2 px-3'
+                  placeholder='Your role'
+                  value={role}
+                  onChange={(e) => setRole(e.target.value)}
                   required
                 />
               </div>

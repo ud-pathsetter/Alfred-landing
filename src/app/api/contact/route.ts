@@ -8,13 +8,14 @@ export async function POST(request: Request) {
     await dbConnect();
 
     // Parse the request body (JSON)
-    const { name, email, organization, industry, message } =
+    const { name, email, role, organization, industry, message } =
       await request.json();
 
     // Create and save a new Contact document
     const newContact = await Contact.create({
       name,
       email,
+      role,
       organization,
       industry,
       message,
