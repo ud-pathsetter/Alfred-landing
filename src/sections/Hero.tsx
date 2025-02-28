@@ -1,59 +1,43 @@
+// // Video Background
 // "use client";
-// import { useRef } from "react";
-// import cloudImage from "@/assets/Cloud Infrastructure.png";
-// import { motion, useScroll, useTransform } from "framer-motion";
 
 // interface HeroProps {
 //   onOpenModal: () => void;
 // }
 
 // export function Hero({ onOpenModal }: HeroProps) {
-//   const heroRef = useRef<HTMLElement | null>(null);
-//   const { scrollYProgress } = useScroll({
-//     target: heroRef,
-//     offset: ["start end", "end start"],
-//   });
-//   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
-
 //   return (
-//     <section
-//       ref={heroRef}
-//       className='pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#00CFAA,#EAEEFE_100%)] overflow-x-clip'
-//     >
-//       <div className='container'>
-//         <div className='md:flex items-center'>
-//           <div className='md:w-[478px]'>
-//             <h1 className='text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#0c3b32] text-transparent bg-clip-text mt-6'>
-//               Clarity in Every Decision
-//             </h1>
-//             <p className='md:text-xl text-lg max-md:leading-[26px] text-[#1c3a63] tracking-tight mt-6'>
-//               {/* <p className='md:text-xl text-lg max-md:leading-[26px] text-[#010D3E] tracking-tight mt-6'> */}
-//               Meet Alfred, your AI-powered advisor delivering real-time insights
-//               from all your data. Make faster decisions, cut through the noise,
-//               and focus on what truly matters.
-//             </p>
-//             <div className='flex gap-1 items-center mt-[30px]'>
-//               <button className='btn btn-primary' onClick={onOpenModal}>
-//                 Contact Us
-//               </button>
-//             </div>
-//           </div>
+//     <section className='relative h-[85vh] md:h-[80vh] overflow-hidden'>
+//       {/* Background Video */}
+//       <video
+//         className='absolute top-0 left-0 w-full h-full object-cover z-[-2]'
+//         autoPlay
+//         loop
+//         muted
+//         playsInline
+//       >
+//         <source src='/assets/bgVid2.mp4' type='video/mp4' />
+//         Your browser does not support the video tag.
+//       </video>
 
-//           <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
-//             <motion.img
-//               src={cloudImage.src}
-//               alt='Cog image'
-//               className='md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0'
-//               animate={{
-//                 translateY: [-30, 30],
-//               }}
-//               transition={{
-//                 repeat: Infinity,
-//                 repeatType: "mirror",
-//                 duration: 6,
-//                 ease: "easeInOut",
-//               }}
-//             />
+//       {/* Semi-transparent Overlay */}
+//       <div className='absolute top-0 left-0 w-full h-full bg-black/30 z-[-1]' />
+
+//       {/* Content Container */}
+//       <div className='container h-full flex items-center px-4'>
+//         <div className='w-full max-w-xl'>
+//           <h1 className='text-4xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-gray-300 text-transparent bg-clip-text mt-6'>
+//             Clarity in Every Decision
+//           </h1>
+//           <p className='md:text-xl text-lg leading-relaxed text-white mt-6'>
+//             Meet Alfred, your AI-powered advisor delivering real-time insights
+//             from all your data. Make faster decisions, cut through the noise,
+//             and focus on what truly matters.
+//           </p>
+//           <div className='flex gap-1 items-center mt-8'>
+//             <button className='btn btn-primary' onClick={onOpenModal}>
+//               Contact Us
+//             </button>
 //           </div>
 //         </div>
 //       </div>
@@ -61,16 +45,42 @@
 //   );
 // }
 
-// Video Background
+// Flip text
 "use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface HeroProps {
   onOpenModal: () => void;
 }
 
+const items = [
+  {
+    id: 1,
+    heading: "Clarity in Every Decision",
+    subHeading:
+      "Meet Alfred, your AI-powered advisor delivering real-time insights from all your data. Make faster decisions, cut through the noise, and focus on what truly matters.",
+  },
+  {
+    id: 2,
+    heading: "Optimize Business Functions",
+    subHeading:
+      "Streamline processes across HR, Sales, Finance, and beyond—boosting efficiency and delivering real results.",
+  },
+];
+
 export function Hero({ onOpenModal }: HeroProps) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((state) => (state >= items.length - 1 ? 0 : state + 1));
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
-    <section className='relative h-[85vh] md:h-[80vh] overflow-hidden'>
+    <section className='relative h-[85vh] md:h-[80vh] overflow-hidden flex items-center'>
       {/* Background Video */}
       <video
         className='absolute top-0 left-0 w-full h-full object-cover z-[-2]'
@@ -80,23 +90,35 @@ export function Hero({ onOpenModal }: HeroProps) {
         playsInline
       >
         <source src='/assets/bgVid2.mp4' type='video/mp4' />
-        Your browser does not support the video tag.
       </video>
 
       {/* Semi-transparent Overlay */}
       <div className='absolute top-0 left-0 w-full h-full bg-black/30 z-[-1]' />
 
       {/* Content Container */}
-      <div className='container h-full flex items-center px-4'>
-        <div className='w-full max-w-xl'>
-          <h1 className='text-4xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-gray-300 text-transparent bg-clip-text mt-6'>
-            Clarity in Every Decision
-          </h1>
-          <p className='md:text-xl text-lg leading-relaxed text-white mt-6'>
-            Meet Alfred, your AI-powered advisor delivering real-time insights
-            from all your data. Make faster decisions, cut through the noise,
-            and focus on what truly matters.
-          </p>
+      <div className='container flex items-center px-4'>
+        <div className='w-full max-w-2xl'>
+          <div className='relative'>
+            {/* ✅ Wrap the animated text */}
+            <AnimatePresence mode='wait'>
+              <motion.div
+                key={items[index].id}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ ease: "easeInOut" }}
+              >
+                <h1 className='text-4xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-gray-300 text-transparent bg-clip-text mt-6'>
+                  {items[index].heading}
+                </h1>
+                <p className='md:text-xl text-lg leading-relaxed text-white mt-6'>
+                  {items[index].subHeading}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* ✅ Button is now positioned correctly below the text */}
           <div className='flex gap-1 items-center mt-8'>
             <button className='btn btn-primary' onClick={onOpenModal}>
               Contact Us
