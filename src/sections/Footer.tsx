@@ -21,7 +21,7 @@ export const Footer = () => {
           <a href='#updates'>Updates</a>
         </nav>
         <div className='flex justify-center gap-6 mt-6'>
-          <a href='https://www.linkedin.com/company/pathsetterai/'>
+          <a href='https://x.com/PathsetterAI'>
             <SocialX />
           </a>
           <a href='https://www.linkedin.com/company/pathsetterai/'>

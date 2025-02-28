@@ -19,6 +19,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Features = [
   {
@@ -65,7 +66,12 @@ export const ProductShowcase = () => {
           <div className='flex justify-center'>
             <div className='tag'>Boost your productivity with Alfred</div>
           </div>
-          <h2 className='section-title mt-5'>ALFRED</h2>
+          <h2
+            className='section-title mt-5 tracking-wider'
+            style={{ fontFamily: "Mokoto" }}
+          >
+            ALFRED
+          </h2>
           <h2 className='section-title mt-5'>
             A more effective way of making decisions
           </h2>
@@ -75,13 +81,12 @@ export const ProductShowcase = () => {
           </p>
         </div>
         <div className='relative'>
-          {/* <Image
-            src={Product2}
-            alt='Product Image'
-            className='mt-10 border border-solid border-gray-300'
-          /> */}
-
           <Carousel
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
             opts={{
               loop: true,
             }}

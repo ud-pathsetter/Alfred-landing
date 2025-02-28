@@ -1,7 +1,5 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
-
-import Image from "next/image";
 import Internet from "@/assets/Internet.png";
 import PC from "@/assets/PC.png";
 import fileImage from "@/assets/File.png";

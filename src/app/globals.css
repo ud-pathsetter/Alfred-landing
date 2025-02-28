@@ -127,3 +127,13 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  /* IMPORTANT: The name here must match the font’s internal name or what you want to use in font-family. 
+     If the font’s metadata says "Mokoto Glitch" or "Mokoto Glitch Regular," use that exact name. */
+  font-family: "Mokoto";
+  src: url("/fonts/Mokoto.ttf") format("truetype");
+  /* url("/fonts/Mokoto.woff2") format("woff2"); */
+  font-weight: normal;
+  font-style: normal;
+}
