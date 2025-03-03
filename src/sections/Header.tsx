@@ -85,6 +85,16 @@ export function Header({ onOpenModal }: HeaderProps) {
                   </a>
                 </li>
                 <li>
+                  <a href='#team' onClick={() => setMobileMenuOpen(false)}>
+                    Team
+                  </a>
+                </li>
+                <li>
+                  <a href='#resources' onClick={() => setMobileMenuOpen(false)}>
+                    Insights
+                  </a>
+                </li>
+                <li>
                   <a
                     href='#testimonials'
                     onClick={() => setMobileMenuOpen(false)}
