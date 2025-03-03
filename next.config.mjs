@@ -1,5 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "media.beehiiv.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.linkedin.com",
+        port: "",
+        pathname: "/**",
+      },
+    ],
+  },
   // distDir: "build", // <--- this changes .next to build
   webpack(config) {
     // Grab the existing rule that handles SVG imports

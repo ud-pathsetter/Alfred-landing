@@ -62,6 +62,8 @@ export function Header({ onOpenModal }: HeaderProps) {
             <nav className='hidden md:flex gap-6 text-black/60 items-center'>
               <a href='#about'>About</a>
               <a href='#features'>Features</a>
+              <a href='#team'>Team</a>
+              <a href='#resources'>Insights</a>
               <a href='#testimonials'>Customers</a>
               <a href='#updates'>Updates</a>
               <button onClick={onOpenModal} className='btn btn-primary'>
