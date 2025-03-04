@@ -12,7 +12,10 @@ import { ProductShowcase } from "@/sections/ProductShowcase";
 import { Testimonials } from "@/sections/Testimonials";
 import { ContactModal } from "@/sections/ContactModal";
 import { About } from "@/sections/About";
+import { Team } from "@/sections/Team";
 import { Resources } from "@/sections/Resources";
+import { ImageGallery } from "@/sections/ImageGallery";
+import { CyberSecurity } from "@/sections/CyberSecurity";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,11 +28,14 @@ export default function Home() {
       <Header onOpenModal={openModal} />
       <Hero onOpenModal={openModal} />
       <LogoTicker />
+      <About />
       <ProductShowcase />
       <Functionalities />
-      <About />
       <Resources />
+      <CyberSecurity />
       <Testimonials />
+      <Team />
+      <ImageGallery />
       <CallToAction onOpenModal={openModal} />
       <Footer />
 

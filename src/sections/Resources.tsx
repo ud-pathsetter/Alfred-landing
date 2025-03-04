@@ -11,7 +11,12 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-// Updated articles array with images, dates, etc.
+import report1 from "@/assets/report1.png";
+import report2 from "@/assets/report2.png";
+import report3 from "@/assets/report3.png";
+import report4 from "@/assets/report4.png";
+import report5 from "@/assets/report5.png";
+
 const articles = [
   {
     date: "Jan 20, 2025",
@@ -85,35 +90,36 @@ const articles = [
   },
 ];
 
-// Example PDF reports data (unchanged)
 const pdfReports = [
   {
-    title: "Global Industry Trends 2025",
+    title: "Finance Industry AI Readiness Report",
     description: "A comprehensive overview of market shifts and opportunities.",
     pdfLink: "#",
-    thumbnail:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAABKVBMVEX...",
+    thumbnail: report1,
   },
   {
-    title: "AI Adoption Survey",
+    title: "Pharma Industry AI Readiness Report",
     description: "Insights from 1000+ companies on AI adoption strategies.",
     pdfLink: "#",
-    thumbnail:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAABIFBMVE...",
+    thumbnail: report2,
   },
   {
-    title: "Remote Work Playbook",
+    title: "QSR Industry AI Readiness Report",
     description: "Best practices and frameworks for managing remote teams.",
     pdfLink: "#",
-    thumbnail:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAABKVBMVEX...",
+    thumbnail: report3,
   },
   {
-    title: "Data Security Report",
+    title: "Retail Industry AI Readiness Report",
     description: "Key data protection measures for modern organizations.",
     pdfLink: "#",
-    thumbnail:
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAABIFBMVE...",
+    thumbnail: report4,
+  },
+  {
+    title: "Ridesharing Industry AI Readiness Report",
+    description: "Key data protection measures for modern organizations.",
+    pdfLink: "#",
+    thumbnail: report5,
   },
 ];
 
@@ -129,7 +135,12 @@ export const Resources = () => {
           <div className='flex justify-center'>
             <div className='tag'>Learn & Grow</div>
           </div>
-          <h2 className='section-title mt-5'>Insights</h2>
+          <h2
+            className='section-title mt-5 tracking-wider'
+            style={{ fontFamily: "Mokoto" }}
+          >
+            Insights
+          </h2>
           <p className='section-description mt-5'>
             Stay ahead of the curve with our curated articles and detailed
             industry reports.
@@ -137,14 +148,14 @@ export const Resources = () => {
         </div>
 
         {/* Articles Grid with Image Styling */}
-        <div className='mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+        <div className='grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-12'>
           {articles.map((article, index) => (
             <div
               key={index}
-              className='rounded-md bg-white border border-gray-200 shadow-sm flex flex-col overflow-hidden h-full'
+              className='bg-white rounded-xl shadow-xl border flex flex-col overflow-hidden h-[450px]'
             >
-              {/* Image Section */}
-              <div className='relative w-full h-36 md:h-40 lg:h-44'>
+              {/* Top Half: Image */}
+              <div className='relative h-1/2 w-full'>
                 <Image
                   src={article.image}
                   alt={article.title}
@@ -153,11 +164,13 @@ export const Resources = () => {
                 />
               </div>
 
-              {/* Content Section */}
-              <div className='p-4 flex flex-col h-full'>
-                <div className='flex-1'>
-                  <span className='text-xs text-gray-500'>{article.date}</span>
-                  <h3 className='text-sm md:text-base font-semibold text-gray-800 mt-1'>
+              {/* Bottom Half: Content */}
+              <div className='flex flex-col h-1/2 p-4 text-left justify-between'>
+                <div>
+                  <span className='text-xs text-gray-500 block'>
+                    {article.date}
+                  </span>
+                  <h3 className='text-base md:text-lg font-semibold text-gray-800 mt-2'>
                     {article.title}
                   </h3>
                   <p className='text-sm text-gray-600 mt-2'>
@@ -176,8 +189,8 @@ export const Resources = () => {
           ))}
         </div>
 
-        {/* PDF Reports Carousel (unchanged) */}
-        {/* <div className='mt-16'>
+        {/* PDF Reports Carousel */}
+        <div className='mt-16'>
           <h3 className='font-bold text-xl mb-5'>Industry Reports</h3>
           <Carousel
             plugins={[
@@ -192,20 +205,20 @@ export const Resources = () => {
             <CarouselContent>
               {pdfReports.map((report, idx) => (
                 <CarouselItem className='md:basis-1/2 lg:basis-1/3' key={idx}>
-                  <div className='border border-gray-300 rounded-lg p-6 bg-white mx-2 w-[300px] h-full flex flex-col items-center text-center'>
+                  <div className='bg-white py-10 md:px-14 px-8 rounded-xl shadow-xl text-center border mx-2 w-[300px] h-full flex flex-col items-center'>
                     {report.thumbnail && (
                       <Image
                         src={report.thumbnail}
                         alt={report.title}
                         width={200}
                         height={200}
-                        className='mb-4 object-contain'
+                        className='object-contain mb-4'
                       />
                     )}
                     <h4 className='font-semibold text-lg'>{report.title}</h4>
-                    <p className='text-sm text-gray-600 mt-2'>
+                    {/* <p className='text-sm text-gray-600 mt-2'>
                       {report.description}
-                    </p>
+                    </p> */}
                     <Link href={report.pdfLink}>
                       <span className='mt-4 text-blue-600 hover:underline text-sm font-medium'>
                         View PDF
@@ -218,7 +231,7 @@ export const Resources = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        </div> */}
+        </div>
       </div>
     </section>
   );

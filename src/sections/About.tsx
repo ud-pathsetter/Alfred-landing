@@ -1,20 +1,17 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
-// import Team1 from "@/assets/team1.jpg";
-// import Team2 from "@/assets/team2.jpg";
-// import Team3 from "@/assets/team3.jpg";
-import CEO from "@/assets/CEO.jpeg";
 
 export const About = () => {
   return (
     <section
-      id='team'
+      id='about'
       className='bg-gradient-to-b from-[#fff] to-[#d2ffec] py-24 overflow-x-clip mb-10'
     >
       <div className='container'>
         {/* Vision Section */}
-        <div className='section-heading'>
+        <div className='section-heading w-full max-w-4xl mx-auto'>
           <div className='flex justify-center'>
             <div className='tag'>Pathsetter Vision</div>
           </div>
@@ -34,6 +31,16 @@ export const About = () => {
             economies, drive innovation, and enable global collaboration. They
             are not just entities; they are the beating heart of industries,
             communities, and the future we envision.
+          </p>
+          <p className='section-description mt-5'>
+            Technology has always played a crucial role in helping organizations
+            grow, adapt, and deliver more value. From automation to data-driven
+            insights, the right tools can make businesses more efficient,
+            responsive, and innovative. At Pathsetter AI, we believe in building
+            technology that is accessible, practical, and seamlessly integrates
+            into the way organizations work. Our focus is on creating solutions
+            that enhance productivity, support smarter decision-making, and help
+            businesses stay ahead in an ever-evolving world.
           </p>
         </div>
 
@@ -66,8 +73,8 @@ export const About = () => {
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   d='M21.75 12c0 5.385-4.365 9.75-9.75 
-                  9.75S2.25 17.385 2.25 12 6.615 2.25 
-                  12 2.25 21.75 6.615 21.75 12z'
+                    9.75S2.25 17.385 2.25 12 6.615 2.25 
+                    12 2.25 21.75 6.615 21.75 12z'
                 />
               </svg>
 
@@ -99,8 +106,8 @@ export const About = () => {
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   d='M21.75 12c0 5.385-4.365 9.75-9.75 
-                  9.75S2.25 17.385 2.25 12 6.615 2.25 
-                  12 2.25 21.75 6.615 21.75 12z'
+                    9.75S2.25 17.385 2.25 12 6.615 2.25 
+                    12 2.25 21.75 6.615 21.75 12z'
                 />
               </svg>
 
@@ -133,8 +140,8 @@ export const About = () => {
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   d='M21.75 12c0 5.385-4.365 9.75-9.75 
-                  9.75S2.25 17.385 2.25 12 6.615 2.25 
-                  12 2.25 21.75 6.615 21.75 12z'
+                    9.75S2.25 17.385 2.25 12 6.615 2.25 
+                    12 2.25 21.75 6.615 21.75 12z'
                 />
               </svg>
 
@@ -149,53 +156,6 @@ export const About = () => {
               </div>
             </li>
           </ul>
-        </div>
-
-        {/* Team Members */}
-        <div className='mt-12'>
-          <h3 className='font-bold text-xl text-center'>Meet the Team</h3>
-          <div className='grid gap-5 sm:grid-cols-2 md:grid-cols-3 grid-cols-1 mt-5'>
-            {/* CEO with image */}
-            <div className='flex flex-col items-center'>
-              {/* <Image
-                src={CEO}
-                alt='CEO'
-                width={120}
-                height={120}
-                className='rounded-full'
-              /> */}
-              <h4 className='mt-2 font-semibold'>Sridhar Gadhi</h4>
-              <p className='text-sm text-gray-600'>
-                Founder & Managing Director
-              </p>
-            </div>
-
-            {/* Others: text only */}
-            <div className='flex flex-col items-center justify-center'>
-              <h4 className='font-semibold'>Manohar Varanasi</h4>
-              <p className='text-sm text-gray-600'>
-                Sr. Vice President, Global Delivery
-              </p>
-            </div>
-            <div className='flex flex-col items-center justify-center'>
-              <h4 className='font-semibold'>Srikar Chintalagiri</h4>
-              <p className='text-sm text-gray-600'>Chief Operating Officer</p>
-            </div>
-            <div className='flex flex-col items-center justify-center'>
-              <h4 className='font-semibold'>Nitisha Baalay</h4>
-              <p className='text-sm text-gray-600'>
-                Vice President, Business Operations & HR
-              </p>
-            </div>
-            <div className='flex flex-col items-center justify-center'>
-              <h4 className='font-semibold'>Guhan Ashok</h4>
-              <p className='text-sm text-gray-600'>Product Management Lead</p>
-            </div>
-            <div className='flex flex-col items-center justify-center'>
-              <h4 className='font-semibold'>Chiru Harsh Patnam</h4>
-              <p className='text-sm text-gray-600'>Chief Strategy Officer</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

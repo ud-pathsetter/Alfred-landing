@@ -26,7 +26,13 @@ export function CallToAction({ onOpenModal }: CallToActionProps) {
     >
       <div className='container'>
         <div className='section-heading relative pt-10'>
-          <h2 className='section-title'>Sign up for a demo</h2>
+          <h2
+            // style={{ fontFamily: "Mokoto" }}
+            className='section-title'
+            // className='section-title tracking-wider'
+          >
+            Sign up for a demo
+          </h2>
           <p className='section-description mt-5'>
             Welcome to your AI-powered advisor. Access real-time insights, track
             priorities, and make faster, data-driven decisions. No
@@ -37,14 +43,14 @@ export function CallToAction({ onOpenModal }: CallToActionProps) {
             src={Database.src}
             alt='star imge'
             width={360}
-            className='absolute -left-[350px] -top-[137px]'
+            className='absolute -left-[350px] -top-[137px] hidden lg:block'
             style={{ translateY }}
           />
           <motion.img
             src={Router.src}
             width={360}
             alt='spring image'
-            className='absolute -right-[331px] -top-[19px]'
+            className='absolute -right-[331px] -top-[19px] hidden lg:block'
             style={{ translateY }}
           />
         </div>
