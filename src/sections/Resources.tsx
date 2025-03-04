@@ -94,31 +94,31 @@ const pdfReports = [
   {
     title: "Finance Industry AI Readiness Report",
     description: "A comprehensive overview of market shifts and opportunities.",
-    pdfLink: "#",
+    pdfLink: "/pdfs/Finance Industry_AI Readiness Report.pdf",
     thumbnail: report1,
   },
   {
     title: "Pharma Industry AI Readiness Report",
     description: "Insights from 1000+ companies on AI adoption strategies.",
-    pdfLink: "#",
+    pdfLink: "/pdfs/Pharma Industry_AI Readiness Report.pdf",
     thumbnail: report2,
   },
   {
     title: "QSR Industry AI Readiness Report",
     description: "Best practices and frameworks for managing remote teams.",
-    pdfLink: "#",
+    pdfLink: "/pdfs/QSR Industry_AI Readiness Report.pdf",
     thumbnail: report3,
   },
   {
     title: "Retail Industry AI Readiness Report",
     description: "Key data protection measures for modern organizations.",
-    pdfLink: "#",
+    pdfLink: "/pdfs/Retail Industry_AI Readiness Report.pdf",
     thumbnail: report4,
   },
   {
     title: "Ridesharing Industry AI Readiness Report",
     description: "Key data protection measures for modern organizations.",
-    pdfLink: "#",
+    pdfLink: "/pdfs/Ridesharing Industry_AI Readiness Report.pdf",
     thumbnail: report5,
   },
 ];
@@ -219,7 +219,11 @@ export const Resources = () => {
                     {/* <p className='text-sm text-gray-600 mt-2'>
                       {report.description}
                     </p> */}
-                    <Link href={report.pdfLink}>
+                    <Link
+                      href={report.pdfLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
                       <span className='mt-4 text-blue-600 hover:underline text-sm font-medium'>
                         View PDF
                       </span>
