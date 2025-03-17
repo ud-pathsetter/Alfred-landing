@@ -25,14 +25,13 @@ export const About = () => {
             Charting the Future of Innovation
           </h2>
           <p className='section-description mt-5'>
-            At Pathsetter AI, we started with a singular mission: to make AI
-            truly useful for organizations. We believe that organizations are
-            the cornerstone of progress—microcosms of society that sustain
-            economies, drive innovation, and enable global collaboration. They
-            are not just entities; they are the beating heart of industries,
-            communities, and the future we envision.
+            At Pathsetter AI, our mission is to make AI truly useful for
+            organizations—the driving force behind progress, innovation, and
+            global collaboration. We harness technology, from automation to data
+            insights, to build accessible, practical solutions that enhance
+            productivity and enable smarter decision-making.
           </p>
-          <p className='section-description mt-5'>
+          {/* <p className='section-description mt-5'>
             Technology has always played a crucial role in helping organizations
             grow, adapt, and deliver more value. From automation to data-driven
             insights, the right tools can make businesses more efficient,
@@ -41,7 +40,7 @@ export const About = () => {
             into the way organizations work. Our focus is on creating solutions
             that enhance productivity, support smarter decision-making, and help
             businesses stay ahead in an ever-evolving world.
-          </p>
+          </p> */}
         </div>
 
         {/* Our Values */}
@@ -79,11 +78,9 @@ export const About = () => {
               </svg>
 
               <div>
-                <strong className='font-semibold'>Responsible AI</strong> – We
-                are committed to developing AI solutions that are ethical,
-                transparent, and designed to create positive impact. We believe
-                AI should serve organizations responsibly, ensuring fairness,
-                security, and accountability in every solution we provide.
+                <strong className='font-semibold'>Responsible AI: </strong> We
+                develop ethical, transparent AI that ensures fairness, security,
+                and accountability.
               </div>
             </li>
 
@@ -112,12 +109,9 @@ export const About = () => {
               </svg>
 
               <div>
-                <strong className='font-semibold'>Speed with Purpose</strong> –
-                Innovation thrives on agility. We move fast, but with a clear
-                sense of direction, ensuring that our solutions are not just
-                quick to deploy but also well-aligned with business needs and
-                industry standards. Our speed is driven by intent—helping
-                organizations adapt and stay ahead in an evolving landscape.
+                <strong className='font-semibold'>Speed with Purpose: </strong>
+                We innovate with agility and clear direction, aligning our
+                solutions with business needs.
               </div>
             </li>
 
@@ -146,13 +140,9 @@ export const About = () => {
               </svg>
 
               <div>
-                <strong className='font-semibold'>
-                  Outcome-Driven Approach
-                </strong>{" "}
-                – Results matter. Our focus is always on delivering measurable
-                outcomes for our customers. Whether it’s optimizing efficiency,
-                driving revenue growth, or unlocking new opportunities, we
-                prioritize solutions that make a tangible difference.
+                <strong className='font-semibold'>Outcome-Driven: </strong> We
+                prioritize measurable results, from optimizing efficiency to
+                driving growth and unlocking new opportunities.
               </div>
             </li>
           </ul>
