@@ -16,6 +16,7 @@ import { Team } from "@/sections/Team";
 import { Resources } from "@/sections/Resources";
 import { ImageGallery } from "@/sections/ImageGallery";
 import { CyberSecurity } from "@/sections/CyberSecurity";
+import LeadMagnet from "@/sections/LeadMagnet";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
       <About />
       <ProductShowcase />
       <Functionalities />
+      <LeadMagnet onOpenModal={openModal} />
       <Resources />
       <CyberSecurity />
       <Testimonials />
@@ -38,7 +40,6 @@ export default function Home() {
       <ImageGallery />
       <CallToAction onOpenModal={openModal} />
       <Footer />
-
       <ContactModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );

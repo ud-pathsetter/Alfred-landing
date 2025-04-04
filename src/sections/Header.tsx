@@ -17,7 +17,9 @@ export function Header({ onOpenModal }: HeaderProps) {
       <div className='py-5'>
         <div className='container relative'>
           <div className='flex items-center justify-between'>
-            <Image src={logo} alt='Saas Logo' width={200} />
+            <Link href="/" className="flex items-center">
+              <Image src={logo} alt='Saas Logo' width={200} />
+            </Link>
             <MenuIcon
               className='h-5 w-5 md:hidden cursor-pointer'
               onClick={() => setMobileMenuOpen((prev) => !prev)}
